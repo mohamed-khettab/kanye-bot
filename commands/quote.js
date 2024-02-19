@@ -16,19 +16,30 @@ module.exports = {
     .setName("kanyequote")
     .setDescription("Get a random Kanye quote!"),
   async execute(interaction) {
-    const quote = await fetchQuote();
-    console.log(quote);
-    
-    const exampleEmbed = new EmbedBuilder()
-      .setColor(0x0099ff)
-      .setTitle("Random Kanye Quote")
-      .setAuthor({
-        name: "Kanye West",
-        iconURL: "https://media.tenor.com/N_sak3Z8TVYAAAAe/kanye-west-selfie.png",
-      })
-      .setDescription(`"${quote}"`) 
-      .setTimestamp();
+    try {
+      // defer reply first
+      // reference https://stackoverflow.com/a/68774492
+      await interaction.deferReply();
 
-    await interaction.reply({ embeds: [exampleEmbed] });
+      const quote = await fetchQuote();
+      console.log(quote);
+      
+      const embed = new EmbedBuilder()
+        .setColor(0x0099ff)
+        .setTitle("Random Kanye Quote")
+        .setAuthor({
+          name: "Kanye West",
+          iconURL: "https://media.tenor.com/N_sak3Z8TVYAAAAe/kanye-west-selfie.png",
+        })
+        .setDescription(`"${quote}"`) 
+        .setTimestamp();
+
+      await interaction.editReply({ embeds: [embed] });
+    } catch (error) {
+      console.error("Error executing command:", error);
+      await interaction.reply(
+        "An error occurred while processing the command."
+      );
+    }
   },
 };
