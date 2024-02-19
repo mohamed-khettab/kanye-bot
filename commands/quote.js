@@ -1,11 +1,24 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const quotes = require("../data/quotes.json");
+const axios = require('axios');
+
+const fetchQuote = async () => {
+  try {
+    const response = await axios.get('https://api.kanye.rest');
+    console.log(response.data); 
+    return response.data.quote;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("quote")
+    .setName("kanyequote")
     .setDescription("Get a random Kanye quote!"),
   async execute(interaction) {
+    const quote = await fetchQuote();
+    console.log(quote);
+    
     const exampleEmbed = new EmbedBuilder()
       .setColor(0x0099ff)
       .setTitle("Random Kanye Quote")
@@ -13,8 +26,8 @@ module.exports = {
         name: "Kanye West",
         iconURL: "https://media.tenor.com/N_sak3Z8TVYAAAAe/kanye-west-selfie.png",
       })
-      .setDescription(quotes[Math.floor(Math.random() * quotes.length)])
-      .setTimestamp()
+      .setDescription(`"${quote}"`) 
+      .setTimestamp();
 
     await interaction.reply({ embeds: [exampleEmbed] });
   },
