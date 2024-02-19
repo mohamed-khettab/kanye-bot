@@ -3,5 +3,11 @@
 
 ## TO DO
 
-- [ ] kanyelyrics [song_name]
-- [ ] kanye
+- [x] kanyelyrics [song_name]
+- [ ] kanyegif 
+- [ ] kanyememe
+- [ ] kanyefacts
+- [ ] kanyealbum
+- [ ] kanyelove [user]
+- [ ] kanyeinsult [user]
+- [ ] kanyehelp
