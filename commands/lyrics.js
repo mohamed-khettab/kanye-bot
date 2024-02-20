@@ -33,7 +33,7 @@ module.exports = {
           .setTitle(`Lyrics for ${firstSong.fullTitle}`)
           .setURL(`${firstSong.url}`)
           .setAuthor({ name: "Kanye West", iconURL: "https://media.tenor.com/N_sak3Z8TVYAAAAe/kanye-west-selfie.png" })
-          .setDescription(lyrics.length > 1000 ? lyrics.substring(0, 1000) + "..." : lyrics)
+          .setDescription(lyrics.length > 4090 ? lyrics.substring(0, 4090) + "..." : lyrics)
           .setImage(`${firstSong.image}`)
           .setTimestamp();
 
