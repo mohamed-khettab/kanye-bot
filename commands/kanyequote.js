@@ -33,7 +33,6 @@ module.exports = {
         })
         .setDescription(`"${quote}"`) 
         .setTimestamp();
-
       await interaction.editReply({ embeds: [embed] });
     } catch (error) {
       console.error("Error executing command:", error);

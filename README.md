@@ -8,6 +8,10 @@
 - [ ] kanyememe
 - [ ] kanyefacts
 - [ ] kanyealbum
-- [ ] kanyelove [user]
-- [ ] kanyeinsult [user]
+- [x] kanyelove [user]
+- [x] kanyeinsult [user]
 - [ ] kanyehelp
+
+## Notes
+
+- Make your own compliments and insults instead of using AI Generated ones!!!
