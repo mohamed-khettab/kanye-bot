@@ -4,7 +4,7 @@
 ## TO DO
 
 - [x] kanyelyrics [song_name]
-- [ ] kanyegif 
+- [x] kanyegif 
 - [ ] kanyememe
 - [ ] kanyefacts
 - [ ] kanyealbum

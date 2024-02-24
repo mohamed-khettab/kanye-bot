@@ -20,7 +20,7 @@ module.exports = {
       const embed = new EmbedBuilder()
         .setColor(0x0099ff)
         .setAuthor({
-          name: "Kanye West",
+          name: "Kanye Bot",
           iconURL:
             "https://media.tenor.com/N_sak3Z8TVYAAAAe/kanye-west-selfie.png",
         })

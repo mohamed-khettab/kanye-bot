@@ -28,7 +28,7 @@ module.exports = {
         .setColor(0x0099ff)
         .setTitle("Random Kanye Quote")
         .setAuthor({
-          name: "Kanye West",
+          name: "Kanye Bot",
           iconURL: "https://media.tenor.com/N_sak3Z8TVYAAAAe/kanye-west-selfie.png",
         })
         .setDescription(`"${quote}"`) 
