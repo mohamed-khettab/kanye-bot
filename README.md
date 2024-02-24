@@ -11,7 +11,4 @@
 - [x] kanyelove [user]
 - [x] kanyeinsult [user]
 - [ ] kanyehelp
-
-## Notes
-
-- Make your own compliments and insults instead of using AI Generated ones!!!
+- [ ] make good compliments and insults instead of using ai generated ones
